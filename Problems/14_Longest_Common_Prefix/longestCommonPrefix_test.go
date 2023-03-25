@@ -23,12 +23,12 @@ func TestLongestCommonPrefix(t *testing.T) {
 			want: "",
 		},
 		{
-			name: "second case",
+			name: "one elenemt in slice case",
 			got:  []string{"a"},
 			want: "a",
 		},
 		{
-			name: "third case",
+			name: "equal len of elements case",
 			got:  []string{"car", "cir"},
 			want: "c",
 		},
