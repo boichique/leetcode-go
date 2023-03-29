@@ -3,14 +3,14 @@ package main
 import "fmt"
 
 func containsDuplicate(nums []int) bool {
-	freq := make(map[int]int)
-	for _, num := range nums {
-		freq[num]++
-		if freq[num] > 1 {
-			return true
-		}
-	}
-	return false
+    freq := make(map[int]bool)
+    for _, num := range nums {
+        if freq[num] {
+            return true
+        }
+        freq[num] = true
+    }
+    return false
 }
 
 func main() {
